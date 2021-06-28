@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Connect Card Demo</title>
+    <script>
+        function showConnectCard(service) {
+            window.open('/vandelay_demo/connect-card?service=' + service, 'Connect Card', 'height=800,width=1100');
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: Main;
+            src: url('https://fivetran.com/static-assets-dashboard/manual/fonts/Mark-Medium.v1.woff2') format('woff2'),
+            url('https://fivetran.com/static-assets-dashboard/manual/fonts/Mark-Medium.v1.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+        body {
+            text-align: center;
+            padding-top: 30px;
+        }
+        .primary, .secondary {
+            padding: 9px 20px;
+            display: inline-block;
+            margin-bottom: 0;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            white-space: nowrap;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            outline: 0;
+            transition: all 0.5s ease;
+        }
+        .primary {
+            background: #0080FF;
+            color: #fff;
+            text-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+        }
+        .secondary {
+            background: none;
+            box-shadow: inset 0 0 0 2px #CED0DA;
+            color: #4E545B;
+            text-transform: uppercase;
+        }
+        h1, h2 {
+            font-family: Main;
+            font-weight: 400;
+            color: black;
+        }
+        h1 {
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 40px;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/vandelay_demo_reset" method="post">
+        <h1>
+            <span>Vandelay Industries</span>
+            <button class="secondary" type="submit">Reset</button>
+        </h1>
+    </form>
+
+    <h2>Add data</h2>
+
+    <button class="primary" onclick="showConnectCard('facebook')" {{facebookDisabled}}>Facebook</button>
+    <button class="primary" onclick="showConnectCard('adwords')" {{adwordsDisabled}}>Google</button>
+    <button class="primary" onclick="showConnectCard('salesforce_sandbox')" {{salesforceDisabled}}>Salesforce</button>
+    <button class="primary" onclick="showConnectCard('mysql')" {{mysqlDisabled}}>MySQL</button>
+</body>
+</html>
