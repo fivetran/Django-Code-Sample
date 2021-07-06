@@ -1,7 +1,7 @@
 import datetime
 
 CLOSE_PATH = '/close'
-GROUP_ID = 'hailed_mint'
+GROUP_ID = 'quenched_serotonin'
 GROUP_AUTH = "Basic bUN5WnU3VjJJYXdtMXhCVDpyZnphNnVxeWFOdGZMQVdjOXJVMGM3WXRHbjlKU05vdQ=="
 DEMO_PAGE_TEMPLATE = "PbfCardDemo.html"
 DEMO_PATH = "/vandelay_demo"
@@ -17,4 +17,4 @@ SALESFORCE = "salesforce_sandbox"
 MYSQL = "mysql"
 SERVICES = [FACEBOOK, ADWORDS, SALESFORCE, MYSQL]
 AUTH_COOKIE_EXPIRES_IN = datetime.timedelta(hours=3)
-CONNECTORS_RESET = False
+CONNECTORS_RESET = True

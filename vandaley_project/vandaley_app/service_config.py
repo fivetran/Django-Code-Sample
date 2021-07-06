@@ -33,7 +33,7 @@ def adwords_config(service ,group_id ,schema, table, customer_id, fields):
         "schema": f"{schema}",
         "table": f"{table}",
         "customer_id": f"{customer_id}",
-        "fields": f"{fields}"
+        "fields": [f"{fields}"]
             }
         }
     return config_values

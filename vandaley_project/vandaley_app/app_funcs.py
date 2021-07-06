@@ -27,7 +27,7 @@ def getConfig(service):
     elif service == parameters.SALESFORCE:
         config = service_config.salesforce_config(parameters.SALESFORCE, parameters.GROUP_ID, "salesforce_sandbox")
     elif service == parameters.ADWORDS:
-        config = service_config.adwords_config(parameters.ADWORDS, parameters.GROUP_ID, "adwords","table","",['Date'])
+        config = service_config.adwords_config(parameters.ADWORDS, parameters.GROUP_ID, "adwords","table","","Date")
     elif service == parameters.MYSQL:
         config = service_config.mysql_config(parameters.MYSQL, parameters.GROUP_ID, "mysql", "", "", "", "", "")
     
@@ -36,7 +36,8 @@ def getConfig(service):
 def getConnectCardToken(connector_id):
     segments = [parameters.CONNECTORS_API, connector_id,parameters.PBF_CARD_TOKEN_SEGMENT]
     url = '/'.join(segments)
-    response = api_calls.post_url(url=url)
+    print(f"calling url {url}")
+    response = api_calls.post_url(url=url,values=None)
     json_data = json.loads(response.text)
     if response.status_code not in(200,201):
         return '-no-token-'
@@ -55,4 +56,4 @@ def getPage(existing_connectors):
 
 def delete_connector(connector_id):
     url = parameters.CONNECTORS_API + "/" + str(connector_id)
-    return api_calls.delete_url(url)
+    return api_calls.delete_url(url=url,values=None)
