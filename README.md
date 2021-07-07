@@ -2,6 +2,7 @@
 Uplift on the current vandelay demo page
 
 ## Templates
+
 *error.html* - serves up the error message.
 
 *pbfcarddemo.html* - serves up the landing page for the PBF demo.
@@ -17,3 +18,13 @@ Uplift on the current vandelay demo page
 *service_config.py* - handles building the config object for each service.
 
 *views.py* - handles rendering the homepage, redirecting to reset demo, redirecting to the connector setup page, etc.
+
+## Getting Started
+
+```
+cd vandaley_project/
+
+python3 manage.py runserver
+```
+
+Then, navigate to the server on your browser at localhost:8000 😊
