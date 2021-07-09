@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    function showConnectCard(service) {
+        window.open('/vandelay_demo/connect-card?service=' + service, 'Connect Card', 'height=800,width=1100');
+    }
+  </script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="">
+    <title>Vandelay Corp.</title>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" rel="stylesheet">
+    <!-- Materialize-->
+    <link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/admin-materialize.min.css?v=8850535670742419153" rel="stylesheet">
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/17758583/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="6aacc581eb2b41d74f03c38d3c985dba">
+<meta id="in-context-paypal-metadata" data-shop-id="17758583" data-venmo-supported="true" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
+<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+
+<script>!function(e){e.addEventListener("DOMContentLoaded",function(){var t=['form[action^="/contact"] input[name="form_type"][value="contact"]','form[action*="/comments"] input[name="form_type"][value="new_comment"]','form[action^="/account"] input[name="form_type"][value="customer_login"]','form[action^="/account"] input[name="form_type"][value="recover_customer_password"]','form[action^="/account"] input[name="form_type"][value="create_customer"]'].join(",");null!==e.querySelector(t)&&(window.Shopify=window.Shopify||{},window.Shopify.recaptchaV3=window.Shopify.recaptchaV3||{siteKey:"6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9"},(t=e.createElement("script")).setAttribute("src","https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.5/index.js"),e.body.appendChild(t))})}(document);</script>
+<script integrity="sha256-pVJhp6mHZ0dJmJmDtYierarGeV2NSFSPthRwqW7blSQ=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/load_feature-a55261a7a987674749989983b5889eadaac6795d8d48548fb61470a96edb9524.js" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/shopify_pay/storefront-b61f50798075db890698930c4405673937fe89353f7fea7be88b5ce16a9c0af8.js?v=20210208"></script>
+<script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js" crossorigin="anonymous"></script>
+
+
+<style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {
+  #dynamic-checkout-cart {
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #dynamic-checkout-cart {
+    min-height: 240px;
+  }
+}
+</style><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+  <link rel="canonical" href="https://themes.materializecss.com/pages/admin-dashboard.html">
+</head>
+  <body class="has-fixed-sidenav">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="navbar white">
+          <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4">Home</a>
+            <ul id="nav-mobile" class="right">
+              <li class="hide-on-med-and-down">
+                <form action="/vandelay_demo_reset/" method="post">  
+                <button class="brand-logo grey-text text-darken-2" type="submit">Reset</button>
+                </form>
+              </li>
+              <li class="hide-on-med-and-down"><a href="#!" data-target="dropdown1" class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a></li>
+              <li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons">settings</i></a></li>
+            </ul><a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
+          </div>
+        </nav>
+      </div>
+      <ul id="sidenav-left" class="sidenav sidenav-fixed">
+        <li><a href="/pages/admin-dashboard" class="logo-container">Vandelay<i class="material-icons left">spa</i></a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold waves-effect active"><a class="collapsible-header">Analytics<i class="material-icons chevron">chevron_left</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect active">Dashboard<i class="material-icons">web</i></a></li>
+                  <li><a class="waves-effect">Fixed Chart<i class="material-icons">list</i></a></li>
+                  <li><a class="waves-effect">Grid<i class="material-icons">dashboard</i></a></li>
+                  <li><a class="waves-effect">Chat<i class="material-icons">chat</i></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold waves-effect"><a class="collapsible-header">Financials<i class="material-icons chevron">chevron_left</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect">Line Charts<i class="material-icons">show_chart</i></a></li>
+                  <li><a class="waves-effect">Bar Charts<i class="material-icons">equalizer</i></a></li>
+                  <li><a class="waves-effect">Area Charts<i class="material-icons">multiline_chart</i></a></li>
+                  <li><a class="waves-effect">Doughnut Charts<i class="material-icons">pie_chart</i></a></li>
+                  <li><a class="waves-effect">Financial Charts<i class="material-icons">euro_symbol</i></a></li>
+                  <li><a class="waves-effect">Interactive Charts<i class="material-icons">touch_app</i></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold waves-effect"><a class="collapsible-header">Custom Analytics<i class="material-icons chevron">chevron_left</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect">Fullscreen with Chart<i class="material-icons">show_chart</i></a></li>
+                  <li><a class="waves-effect">Table with Custom Elements<i class="material-icons">settings</i></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold waves-effect"><a class="collapsible-header">Cloud Data<i class="material-icons chevron">chevron_left</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect">Sync in Cloud<i class="material-icons">cloud</i></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold waves-effect"><a class="collapsible-header">Raw Metrics<i class="material-icons chevron">chevron_left</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect">Tabbed<i class="material-icons">tab</i></a></li>
+                  <li><a class="waves-effect">Metrics<i class="material-icons">web</i></a></li>
+                  <li><a class="waves-effect">Search<i class="material-icons">search</i></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold waves-effect"><a class="collapsible-header">Login/Logout<i class="material-icons chevron">chevron_left</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect">Log In<i class="material-icons">person</i></a></li>
+                  <li><a class="waves-effect">Settings<i class="material-icons">settings</i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="dropdown1" class="dropdown-content notifications">
+        <div class="notifications-title">notifications</div>
+        <div class="card">
+          <div class="card-content"><span class="card-title">Joe Smith made a purchase</span>
+            <p>Content</p>
+          </div>
+          <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+        </div>
+        <div class="card">
+          <div class="card-content"><span class="card-title">Daily Traffic Update</span>
+            <p>Content</p>
+          </div>
+          <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+        </div>
+        <div class="card">
+          <div class="card-content"><span class="card-title">New User Joined</span>
+            <p>Content</p>
+          </div>
+          <div class="card-action"><a href="#!">view</a><a href="#!">dismiss</a></div>
+        </div>
+      </div>
+      <div id="chat-dropdown" class="dropdown-content dropdown-tabbed">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a href="#settings">Settings</a></li>
+          <li class="tab col s3"><a href="#friends" class="active">Friends</a></li>
+        </ul>
+        <div id="settings" class="col s12">
+          <div class="settings-group">
+            <div class="setting">Night Mode
+              <div class="switch right">
+                <label>
+                  <input type="checkbox"><span class="lever"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting">Beta Testing
+              <label class="right">
+                <input type="checkbox"><span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="friends" class="col s12">
+          <ul class="collection flush">
+            <li class="collection-item avatar">
+              <div class="badged-circle online"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait1.jpg?v=1218798423999129079" alt="avatar" class="circle"></div><span class="title">Jane Doe</span>
+              <p class="truncate">Lo-fi you probably haven't heard of them</p>
+            </li>
+            <li class="collection-item avatar">
+              <div class="badged-circle"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait2.jpg?v=15342908036415923195" alt="avatar" class="circle"></div><span class="title">John Chang</span>
+              <p class="truncate">etsy leggings raclette kickstarter four dollar toast</p>
+            </li>
+            <li class="collection-item avatar">
+              <div class="badged-circle"><img src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait3.jpg?v=4679613373594475586" alt="avatar" class="circle"></div><span class="title">Lisa Simpson</span>
+              <p class="truncate">Raw denim fingerstache food truck chia health goth synth</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main><div class="container">
+  <div class="masonry row">
+    <div class="col s12">
+      <h2>Dashboard</h2>
+    </div>
+    <div class="col l3 m6 s12">
+
+      <div class="card">
+        <div class="card-stacked">
+          <div class="card-metrics card-metrics-static">
+            <div class="card-metric">
+              <div class="card-metric-title">Connector:</div>
+              <div class="card-metric-value" onclick="showConnectCard('facebook')" >Facebook</div>
+              <div class="card-metric-change increase">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-chart">
+          <canvas id="flush-area-chart-blue" height="100px"></canvas>
+        </div>
+      </div>
+
+    </div>
+    <div class="col l3 m6 s12">
+
+      <div class="card">
+        <div class="card-stacked">
+          <div class="card-metrics card-metrics-static">
+            <div class="card-metric">
+              <div class="card-metric-title">Connector:</div>
+              <div class="card-metric-value" onclick="showConnectCard('mysql')" >MySQL</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-chart">
+          <canvas id="flush-area-chart-yellow" height="100px"></canvas>
+        </div>
+      </div>
+
+    </div>
+    <div class="col l3 m6 s12">
+
+      <div class="card">
+        <div class="card-stacked">
+          <div class="card-metrics card-metrics-static">
+            <div class="card-metric">
+              <div class="card-metric-title">Connector:</div>
+              <div class="card-metric-value" onclick="showConnectCard('adwords')" >Google Ads</div>
+              <div class="card-metric-change decrease">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-chart">
+          <canvas id="flush-area-chart-pink" height="100"></canvas>
+        </div>
+      </div>
+
+    </div>
+    <div class="col l3 m6 s12">
+
+      <div class="card">
+        <div class="card-stacked">
+          <div class="card-metrics card-metrics-static">
+            <div class="card-metric">
+              <div class="card-metric-title">Connector:</div>
+              <div class="card-metric-value" onclick="showConnectCard('salesforce_sandbox')" >Salesforce</div>
+              <div class="card-metric-change decrease">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-chart">
+          <canvas id="flush-area-chart-green" height="100"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+    <div class="col m6 s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Updates</span>
+          <ul class="badge-updates">
+            <li>
+                <span class="new badge green" data-badge-caption="Data Sync Connected"></span>
+                <span class="message">Facebook connector created</span>
+                <span class="time">14 minutes ago</span>
+            </li>
+            <li>
+                <span class="new badge red" data-badge-caption="Data Sync Failed"></span>
+                <span class="message">PostgreSQL connector failed</span>
+                <span class="time">17 minutes ago</span>
+            </li>
+            <li>
+              <span class="new badge green" data-badge-caption="Data Sync Connected"></span>
+              <span class="message">Google connector created</span>
+              <span class="time">22 minutes ago</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col m6 s12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Converted Ads by Devices</span>
+          <div class="row row-vertical-center">
+            <div class="col s6">
+              <canvas id="doughnut-chart" width="50%"></canvas>
+            </div>
+            <div class="col s6">
+              <div class="chart-legend-wrapper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer><!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+
+<!-- External libraries -->
+
+<!-- jqvmap -->
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.min.js?v=16312383892908448454"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.world.js?v=7251365059269487148" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.sampledata.js?v=8702362987075556685"></script>
+
+<!-- ChartJS -->
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?v=2884891905158527706"></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?v=3464499164675255295"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/imagesloaded.pkgd.min.js?v=5881977179676351054"></script>
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?v=18031290468259756901"></script>
+
+
+<!-- Initialization script -->
+<script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/dashboard.min.js?v=481680883062710906"></script>
+  </body>
+</html>
