@@ -36,13 +36,16 @@ Uplift on the current vandelay demo page. Where do I [recognize this name from](
 
 ### Start the Engines
 * Open up two terminals and run the following commands in each of them. Make sure you have your virtualenv sourced first!
-* Run Django `python3 manage.py runserver`
 * Run Tailwind `python3 manage.py tailwind start`
+* Run Django `python3 manage.py runserver`
+
+### I'm having problems!
+* Inspect your console and see if it says it can't find the CSS file. If that's true, try and restart the tailwind service (which generates the css file), then restart the django server so it detects the file. That should do it. 
 
 Then, navigate to the server in your browser at localhost:8000 😊
 
 All files will automatically reload when they're changed via browsersync. If you want to adjust the base styling, it's in `vandelay_project/theme/templates`.
 
 Available URLs:
-- Vandaley Demo: http://127.0.0.1:8000/vandelay_demo
+- Vandelay Demo: http://127.0.0.1:8000/vandelay_demo
 - Tailwind Demo: http://127.0.0.1:8000/tailwind/
