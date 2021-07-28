@@ -39,6 +39,8 @@ Uplift on the current vandelay demo page. Where do I [recognize this name from](
 * Run Tailwind `python3 manage.py tailwind start`
 * Run Django `python3 manage.py runserver`
 
+* For fast setup navigate to the root folder and run `./setup.sh`
+
 ### I'm having problems!
 * Inspect your console and see if it says it can't find the CSS file. If that's true, try and restart the tailwind service (which generates the css file), then restart the django server so it detects the file. That should do it. 
 
