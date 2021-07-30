@@ -178,3 +178,9 @@ Thumbs.db
 *.tar
 *.zip
 .DS_Store
+
+# The environment variable file
+.env
+
+# The standard db.sqlite3 file
+*.sqlite3

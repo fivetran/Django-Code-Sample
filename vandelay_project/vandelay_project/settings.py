@@ -1,3 +1,5 @@
+import environ
+
 """
 Django settings for vandelay_project project.
 
@@ -134,3 +136,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Adds the tailwind 'theme' app.
 TAILWIND_APP_NAME = 'theme'
+
+import environ
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
+
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+API_KEY = env("API_KEY")
+API_SECRET = env("API_SECRET")

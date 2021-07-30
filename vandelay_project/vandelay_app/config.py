@@ -1,4 +1,8 @@
-# See https://fivetran.com/account/settings
+import environ
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
-API_KEY = "mCyZu7V2Iawm1xBT"
-API_SECRET = "rfza6uqyaNtfLAWc9rU0c7YtGn9JSNou"
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+API_KEY = env("API_KEY")
+API_SECRET = env("API_SECRET")
