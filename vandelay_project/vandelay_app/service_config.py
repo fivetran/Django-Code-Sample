@@ -52,6 +52,5 @@ def mysql_config(service ,group_id ,schema_prefix, host, port, user, password, d
         "password": f"{password}",
         "database": f"{database}",
             }
-    }
-
+    } 
     return config_values
