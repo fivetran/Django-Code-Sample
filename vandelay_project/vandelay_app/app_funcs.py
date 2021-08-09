@@ -5,7 +5,7 @@ import json
 
 def checkPermissions():
     token =  getToken()
-    if token not in ('1k56c2c4xlti6_acc','shipping_auditorium'):
+    if token not in ('1k56c2c4xlti6_acc', 'shipping_auditorium'):
         return False
     return True
 
@@ -30,7 +30,6 @@ def getConfig(service):
         config = service_config.adwords_config(parameters.ADWORDS, parameters.GROUP_ID, "adwords","table","","Date")
     elif service == parameters.MYSQL:
         config = service_config.mysql_config(parameters.MYSQL, parameters.GROUP_ID, "mysql", "", "", "", "", "")
-    
     return config
 
 def getConnectCardToken(connector_id):
@@ -47,7 +46,7 @@ def getPage(existing_connectors):
     
     context = dict()
     for service in parameters.SERVICES:
-        for connector in existingConnectors:
+        for connector in existing_connectors:
             if service == connector['service']:
                 key = f"{service}Disabled"
                 context[key] = "disabled"
