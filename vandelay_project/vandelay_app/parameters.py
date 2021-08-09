@@ -1,8 +1,15 @@
 import datetime
 
+import environ
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
+
+KEY = env("64_ENCODE") # also set in the settings.py file
+
 CLOSE_PATH = '/close'
-GROUP_ID = 'quenched_serotonin'
-GROUP_AUTH = "Basic bUN5WnU3VjJJYXdtMXhCVDpyZnphNnVxeWFOdGZMQVdjOXJVMGM3WXRHbjlKU05vdQ=="
+GROUP_ID = 'quenched_serotonin' # change this to complete setup
+GROUP_AUTH = "Basic " + KEY
 DEMO_PAGE_TEMPLATE = "PbfCardDemo.html"
 DEMO_PATH = "/vandelay_demo"
 FIVETRAN_PATH = "https://fivetran.com"
@@ -15,6 +22,6 @@ FACEBOOK = "facebook"
 ADWORDS = "adwords"
 SALESFORCE = "salesforce_sandbox"
 MYSQL = "mysql"
-SERVICES = [FACEBOOK, ADWORDS, SALESFORCE, MYSQL]
+SERVICES = [FACEBOOK, ADWORDS, SALESFORCE, MYSQL] #add your new connector in here
 AUTH_COOKIE_EXPIRES_IN = datetime.timedelta(hours=3)
 CONNECTORS_RESET = True
