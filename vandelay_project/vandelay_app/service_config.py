@@ -1,4 +1,7 @@
 
+from vandelay_app import config
+
+
 def facebook_config(service ,group_id ,schema ,table):
     config_values = {
         "service": f"{service}",
@@ -24,7 +27,7 @@ def salesforce_config(service ,group_id ,schema):
     }
     return config_values
 
-def adwords_config(service ,group_id ,schema, table, customer_id, fields):
+def s3_config(service ,group_id ,schema, table, external_id, role_arn):
     config_values = {
     "service": f"{service}",
     "group_id": f"{group_id}",
@@ -32,10 +35,11 @@ def adwords_config(service ,group_id ,schema, table, customer_id, fields):
     "config": {
         "schema": f"{schema}",
         "table": f"{table}",
-        "customer_id": f"{customer_id}",
-        "fields": [f"{fields}"]
-            }
+        "external_id": f"{external_id}",
+        "role_arn": f"{role_arn}"
         }
+    }
+
     return config_values
 
 def mysql_config(service ,group_id ,schema_prefix, host, port, user, password, database):

@@ -2,10 +2,11 @@ from vandelay_app import service_config
 from vandelay_app import parameters
 from vandelay_app import api_calls
 import json
+import sys
 
 def checkPermissions():
     token =  getToken()
-    if token not in ('1k56c2c4xlti6_acc', 'shipping_auditorium'):
+    if token not in ('1k56c2c4xlti6_acc', 'wad_crewmate'):
         return False
     return True
 
@@ -26,10 +27,12 @@ def getConfig(service):
         config = service_config.facebook_config(parameters.FACEBOOK, parameters.GROUP_ID,"facebook","table")
     elif service == parameters.SALESFORCE:
         config = service_config.salesforce_config(parameters.SALESFORCE, parameters.GROUP_ID, "salesforce_sandbox")
-    elif service == parameters.ADWORDS:
-        config = service_config.adwords_config(parameters.ADWORDS, parameters.GROUP_ID, "adwords","table","","Date")
+    elif service == parameters.S3:
+        config = service_config.s3_config(parameters.S3, parameters.GROUP_ID, "s3", "table_name", parameters.EXTERNAL_ID, "")
     elif service == parameters.MYSQL:
         config = service_config.mysql_config(parameters.MYSQL, parameters.GROUP_ID, "mysql", "", "", "", "", "")
+
+    print(config, file=sys.stderr)
     return config
 
 def getConnectCardToken(connector_id):

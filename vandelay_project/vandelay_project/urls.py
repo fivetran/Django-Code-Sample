@@ -21,10 +21,10 @@ from vandelay_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.redirect_to_index,name="redirect_to_index"),
-    path('vandelay_demo/',views.index,name="index"),
+    path('pbf/',views.index,name="index"),
     path('tailwind/',views.tailwind,name="tailwind"),
     # path('tw_demo/',views.twindex,name="twindex"),
-    path('vandelay_demo/connect-card/',views.connect_card_process,name="index"),
-    path('vandelay_demo/close/',views.close,name="close"),
-    path('vandelay_demo_reset/',views.reset,name="reset"),
+    path('pbf/connect-card/',views.connect_card_process,name="index"),
+    path('pbf/close/',views.close,name="close"),
+    path('pbf_reset/',views.reset,name="reset"),
 ]

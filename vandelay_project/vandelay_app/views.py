@@ -8,6 +8,7 @@ from vandelay_app import api_calls
 from http import HTTPStatus
 import json
 import datetime
+import sys
 
 def index(request):
     return render(request,'PbfCardDemo.html')
@@ -16,11 +17,11 @@ def tailwind(request):
     return render(request,'tailwind.html')
 
 def redirect_to_index(request):
-    return redirect('vandelay_demo/')
+    return redirect('pbf/')
 
 def close(request):
     auth = request.GET.get('auth')
-    path = parameters.FIVETRAN_PATH + parameters.DEMO_PATH
+    path = parameters.FIVETRAN_PATH + '/dashboard/connectors'
     resp = f"<script>window.close();window.opener.location.href='{path}?auth={auth}';</script>"
 
     return HttpResponse(resp)
@@ -49,17 +50,18 @@ def reset(request):
                 if response.status_code in(200,201,202):
                     print("connector", connector['id'], " successfully deleted")
 
-    return redirect('/vandelay_demo')
+    return redirect('/pbf')
 
 
 def connect_card_process(request):
-    service = request.GET.get('service')
+    service = request.GET.get('service').lower()
     permissions = app_funcs.checkPermissions()
 
     if not permissions:
         return render(request,'error.html',{'error' : 'Permission failure - failed in checkPermissions()'})
     
     config = app_funcs.getConfig(service)
+
     response = api_calls.post_url(url=parameters.CONNECTORS_API, values=config)
     print(response.text)
 
@@ -73,7 +75,7 @@ def connect_card_process(request):
     if token == '-no-token-':
         return render(request,'error.html',{'error' : 'token could not be generated, failed in getConnectCardToken'})
     
-    redirect_url = parameters.FIVETRAN_PATH + parameters.DEMO_PATH + parameters.CLOSE_PATH
+    redirect_url = parameters.FIVETRAN_PATH + '/dashboard/connectors'
     redirect_url = redirect_url + "?auth=" + token
 
     main_url = parameters.PBF_CARD_PAGE_BASE

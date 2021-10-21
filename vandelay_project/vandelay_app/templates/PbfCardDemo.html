@@ -3,7 +3,7 @@
 {% block content %}
 <script>
   function showConnectCard(service) {
-      window.open('/vandelay_demo/connect-card?service=' + service, 'Connect Card', 'height=800,width=1100');
+      window.open('/pbf/connect-card?service=' + service, 'Connect Card', 'height=800,width=1100');
   }
 </script>
 
@@ -64,7 +64,7 @@
               <svg class="mr-4 flex-shrink-0 h-6 w-6 text-indigo-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
-              Vandelay Industries
+              Powered By Fivetran
             </a>
   
             <a href="" class="text-indigo-100 hover:bg-indigo-600 group flex items-center px-2 py-2 text-base font-medium rounded-md">
@@ -295,7 +295,7 @@
 
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <br>
-            <h1 class="text-2xl font-semibold text-gray-900" >Vandelay Industries</h1>
+            <h1 class="text-2xl font-semibold text-gray-900" >Powered By Fivetran</h1>
             <br>
           </div>
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -357,12 +357,12 @@
                       <div class="flex-shrink-0 flex items-center justify-center w-16 text-white text-sm font-medium rounded-l-md">
 
                         <!-- Injects the connector logo from the REST API -->
-                        <img class="salesforce-api-logo" src="https://fivetran.com/integrations/adwords/resources/google_ads.png" alt="">
+                        <img class="salesforce-api-logo" src="https://fivetran.com/integrations/s3/resources/s3.svg" alt="">
 
                       </div>
                       <div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                         <div class="flex-1 px-4 py-2 text-sm truncate">
-                          <a href="#" onclick="showConnectCard('adwords')" class="text-gray-900 font-medium hover:text-gray-600">Google Ads</a>
+                          <a href="#" onclick="showConnectCard('S3')" class="text-gray-900 font-medium hover:text-gray-600">AWS S3</a>
                           <p class="text-gray-500">Connector</p>
                         </div>
                         <div class="flex-shrink-0 pr-2">
