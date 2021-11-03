@@ -2,7 +2,7 @@
 Uplift on the current vandelay demo page. [Where do I recognize this name from](https://seinfeld.fandom.com/wiki/Vandelay_Industries)?
 
 
-# Prerequisite
+# 📣 Prerequisite
 
 ## Have the right packages installed in your local environment
 * Make sure you have [brew](https://brew.sh/) installed
@@ -20,7 +20,7 @@ Go to your Fivetran account and setup a destination via the UI. This will assign
 4. Copy this value down as it is very important for a live, data flowing, application.
 
 
-# Quickstart
+# 🏃 Quickstart
 
 ## 0. Create a new directory in your development directory environment
 ```
@@ -67,7 +67,7 @@ Hit `CTRL-C` to exit the tailwind server and return to the Django server page be
 ## 8. Open the demo app in your browser.
 Go to `localhost:8000` and view the rendered application.
 
-# Important Notes
+# ‼️ Important Notes ‼️
 - When you setup the demo environment you can only use one instance of each connector. If you click on the connector multiple times you will be promted with the following error:
 ```
 Error occured - Failed while posting on https://api.fivetran.com/v1/connectors {"code":"SchemaExists","message":"An integration with schema \"test_oracle\" already exists, please choose a different schema"}
@@ -83,7 +83,7 @@ Error occured - Failed while posting on https://api.fivetran.com/v1/connectors {
 ```
 
 
-### I'm having problems!
+### 🙋 I'm having problems!
 * Inspect your console and see if it says it can't find the CSS file. If that's true, try and restart the tailwind service (which generates the css file), then restart the django server so it detects the file. That should do it. 
 
 Then, navigate to the server in your browser at localhost:8000 😊
