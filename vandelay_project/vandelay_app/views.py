@@ -75,7 +75,7 @@ def connect_card_process(request):
     if token == '-no-token-':
         return render(request,'error.html',{'error' : 'token could not be generated, failed in getConnectCardToken'})
     
-    redirect_url = parameters.FIVETRAN_PATH + '/dashboard/connectors'
+    redirect_url = parameters.FIVETRAN_PATH
     redirect_url = redirect_url + "?auth=" + token
 
     main_url = parameters.PBF_CARD_PAGE_BASE

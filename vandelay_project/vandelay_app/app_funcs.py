@@ -31,8 +31,10 @@ def getConfig(service):
         config = service_config.s3_config(parameters.S3, parameters.GROUP_ID, "s3", "table_name", parameters.EXTERNAL_ID, "")
     elif service == parameters.MYSQL:
         config = service_config.mysql_config(parameters.MYSQL, parameters.GROUP_ID, "mysql", "", "", "", "", "")
-
-    print(config, file=sys.stderr)
+    elif service == parameters.ORACLE:
+        config = service_config.oracle_config(parameters.ORACLE, parameters.GROUP_ID, "test_oracle", "", "", "", "", "")
+    elif service == parameters.GCF:
+        config = service_config.gcf_config(parameters.GCF, parameters.GROUP_ID, "schema_name", "", "")
     return config
 
 def getConnectCardToken(connector_id):

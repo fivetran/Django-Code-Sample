@@ -23,6 +23,8 @@ FACEBOOK = "facebook"
 S3 = "s3"
 SALESFORCE = "salesforce_sandbox"
 MYSQL = "mysql"
-SERVICES = [FACEBOOK, S3, SALESFORCE, MYSQL] #add your new connector in here
+ORACLE = "oracle_rds"
+GCF = "google_cloud_function"
+SERVICES = [FACEBOOK, S3, SALESFORCE, MYSQL, ORACLE, GCF] #add your new connector in here
 AUTH_COOKIE_EXPIRES_IN = datetime.timedelta(hours=3)
 CONNECTORS_RESET = True

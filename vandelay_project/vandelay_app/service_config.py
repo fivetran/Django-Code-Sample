@@ -58,3 +58,33 @@ def mysql_config(service ,group_id ,schema_prefix, host, port, user, password, d
             }
     } 
     return config_values
+
+def oracle_config(service, group_id, schema_prefix, host, port, user, password, database):
+
+    config_values = {
+        "service": f"{service}",
+        "group_id": f"{group_id}",
+        "trust_certificates": "true",
+        "config": {
+            "schema_prefix": f"{schema_prefix}",
+            "host": f"{host}",
+            "port": f"{port}",
+            "user": f"{user}",
+            "password": f"{password}",
+            "database": f"{database}",
+        }
+    }
+    return config_values
+
+def gcf_config(service, group_id, schema, function_trigger, secrets):
+
+    config_values = {
+        "service": f"{service}",
+        "group_id": f"{group_id}",
+        "config": {
+            "schema": f"{schema}",
+            "function_trigger": f"{function_trigger}",
+            "secrets": f"{secrets}"
+        }
+    }
+    return config_values
